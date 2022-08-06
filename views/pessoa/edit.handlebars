@@ -1,0 +1,35 @@
+<h1>Atualização de Pessoas</h1>
+
+<div class="mt-5">
+    <form action="/pessoa/update/{{ pessoa.id }}" method="POST">
+        <div class="mb-4">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" class="form-control" value="{{ pessoa.nome }}">
+        </div>
+
+        <div class="mb-4">
+            <label for="email">Email</label>
+            <input type="text" name="email" class="form-control" value="{{ pessoa.email }}">
+        </div>
+
+        <div class="mb-4">
+            <label for="data_nascimento">Data de Nascimento</label>
+            <input type="text" name="data_nascimento" class="form-control" value="{{ pessoa.data_nascimento }}">
+        </div>
+
+        <div class="mb-4">
+            <label for="salario">Salário</label>
+            <input type="text" name="salario" class="form-control" value="{{ pessoa.salario }}">
+        </div>
+
+        <button class="btn btn-success">Salvar</button>
+    </form>
+</div>
+
+<div class="mt-5">
+    {{#each pessoa.telefones }}
+        <div>
+            {{ this.numero }}
+        </div>
+    {{/each}}
+</div>

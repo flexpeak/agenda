@@ -1,0 +1,40 @@
+<h1>Criação de Pessoas</h1>
+
+<div class="mt-5">
+    <form action="/pessoa/store" method="POST">
+        <div class="mb-4">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" class="form-control">
+        </div>
+
+        <div class="mb-4">
+            <label for="email">Email</label>
+            <input type="text" name="email" class="form-control">
+        </div>
+
+        <div class="mb-4">
+            <label for="data_nascimento">Data de Nascimento</label>
+            <input type="text" name="data_nascimento" class="form-control" id="data_nascimento">
+        </div>
+
+        <div class="mb-4">
+            <label for="salario">Salário</label>
+            <input type="text" name="salario" class="form-control" id="salario">
+        </div>
+
+        <button class="btn btn-success">Salvar</button>
+    </form>
+</div>
+
+{{#section 'scripts'}}
+    <script>
+        $('#data_nascimento').datepicker({
+            language: "pt-BR"
+        });
+
+        $(document).ready(function(){
+            $('#data_nascimento').mask('00/00/0000');
+            $('#salario').mask("#.##0,00", {reverse: true});
+        })
+    </script>
+{{/section}}
