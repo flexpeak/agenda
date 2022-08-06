@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "nodemon ."
   },
   "keywords": [],
@@ -18,6 +18,7 @@
     "express-flash": "0.0.2",
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
+    "jest": "^28.1.3",
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.16",
